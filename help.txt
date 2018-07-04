@@ -1,0 +1,39 @@
+﻿UWAGA!
+Program nie zawiera walidacji protokou. Warunkiem poprawnej symulacji jest poprawnie zdefiniowany protokól.
+Przykładowy plik z protokołem znajduje się w folderze protocols.
+Przykładowy plik z grafem znajduje się w folderze graphs.
+Przykładowy plik z wynikem znajduje się w folderze results.
+
+1. Uruchomienie programu:
+Należy uruchomić program: PopulationProtocolApp.exe 
+
+2. Aby zdefiniować własny protokół: 
+	a. Naciśnij 'Create New Protocol'
+	b. Wprowadź symbole alfabetu wejściowego X, stany Q oraz symbole wyjściowe Y. Symbole mogą być tylko liczbami lub literami. Wprowadzone symbole wyświetlą się w odpowiednich polach tekstowych.
+	c. Utwórz funkcje wejściową I, funkcję tranzycji oraz funkcję wyjściową O przez wybranie odpowiednich symboli w comboBox'ach.
+	d. Wprowadź nazwę pliku oraz wybierz katalog, w którym ma zostać zapisany. 
+	e. Naciśnij 'Save', co spowoduje automatyczny powrót do okna głównego.
+	f. Naciśnij 'Load the last created protocol' w celu załadowania utworzonego protokołu. Spowoduje to wyświetlenie protkołu w polu tekstowym poniżej.
+
+3. Na każdym etapie można wczytać protokół z pliku. W tym celu naciśnij 'Select existing protocol', wybierz protokół. Protokół zostanie automatycznie wyświetlony w polu teksowym.
+
+4. Aby stworzyć nowy graf:
+	a. Naciśnij 'Create new graph'
+	b. Można utworzyć:
+		- losowy graf wpisując jedynie liczbę wierchołków. Program automatycznie losuje wierzchołki z alfabetu wejściowego X załadowanego wcześniej protokołu.
+		- zdefiniować poszczególną liczbę wierzchołków o danym symbolu z alfabetu wejściowego X. W tym celu należy odznaczyć pole 'Random graph'. 
+	c. Nacisnąć 'Ok', co spowoduje automatyczny powrót do okna głównego. 
+	d. Naciśnij 'Load the last created graph' w celu załadowania utworzonego grafu. Spowoduje to wyświetlenie protkołu w polu tekstowym poniżej. Graf zostanie zapisany w pliku pod nazwą : graph_<liczba_wierzchołków>_<konfiguracja_poczatkowa>_<timestamp>.txt 
+	
+5. Na każdym etapie można wczytać graf z pliku. W tym celu naciśnij 'Select existing graph' i wybierz odpowiedni graf. Graf zostanie sprawdzony pod względem kompatybilności z protokołem, jeśli będzie kompatybilny zostanie automatycznie wyświetlona informacja o grafie w polu tekstowym poniżej, w innym przypadku zostanie wyświetlony odpowiedni komunikat.
+
+6. Po wycztaniu protokołu oraz grafu zostanie automatycznie utworzona nazwa pliku z wynikiem, którą można edytować. Domyślnie plik zostanie zapisany w folderze "results".
+
+7. Należy ustawić liczbę powtórzeń pojedynczej symulacji, w celu otrzymania jak najdokładniejszego liczba. Rekomendowana liczba powtórzeń to min. 1000. 
+
+8. W celu uruchomienia symulacji naciśnij 'Start'. Zostanie uruchomiona symulacja, na koniec której wyświetli się okno z wynikiem testu. Okno to zawiera m.in. poprawność odpowiedzi, a także średnią liczbę interakcji (czas) potrzebny do uzyskania zbieżności przez protokół.
+
+9. Po zakończeniu testu, należy wyłączyć okno z wynikiem, co spowoduje powrót do okna głównego. Następnie można od nowa uruchomić test dla innego prtokołu i grafu, zgodnie z powyższymi krokami.
+
+
+

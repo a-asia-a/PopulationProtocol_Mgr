@@ -1,0 +1,85 @@
+﻿<Window x:Class="PopulationProtocolApp.ProtocolWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PopulationProtocolApp"
+        mc:Ignorable="d"
+        Title="ProtocolWindow" Height="601.333" Width="896.017" Closed="Window_Closed_1">
+    <Grid Background="#FFE5E5E6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox x:Name="groupBox_alphabets" Header="Protolol's sets" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="550" Width="244" OpacityMask="#FF951919" BorderBrush="#FF0E4464">
+            <Grid HorizontalAlignment="Left" Height="530" VerticalAlignment="Top" Width="234" Margin="0,0,-2,-12">
+                <Label x:Name="label_inputAlphabet" Content="X - Input Alphabet" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="130"/>
+                <TextBox x:Name="textBox_InputAlphabet" HorizontalAlignment="Left" Height="23" Margin="10,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" TextChanged="textBox_InputAlphabet_TextChanged" KeyDown="textBox_InputAlphabet_KeyDown" PreviewTextInput="NumberValidationTextBox" />
+                <ListBox x:Name="listBox_inputAlphabet" HorizontalAlignment="Left" Height="100" Margin="10,76,0,0" VerticalAlignment="Top" Width="130"/>
+                <Button x:Name="button_addToInputAlphabet" Content="Add" HorizontalAlignment="Left" Margin="154,48,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_addToInputAlphabet_Click_1"/>
+                <Button x:Name="button_clearInputAlphabet" Content="Clear" HorizontalAlignment="Left" Margin="154,153,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_clearInputAlphabet_Click"/>
+                <Button x:Name="button_removeFromInputAlphabet" Content="Remove" HorizontalAlignment="Left" Margin="154,125,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_removeFromInputAlphabet_Click"/>
+                <Label x:Name="label_statesAlphabet" Content="Q - Set of states:" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" Width="130"/>
+                <TextBox x:Name="textBox_stateAlphabet" HorizontalAlignment="Left" Height="23" Margin="10,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" TextChanged="textBox_stateAlphabet_TextChanged"  PreviewTextInput="NumberValidationTextBox"/>
+                <ListBox x:Name="listBox_stateAlphabet" HorizontalAlignment="Left" Height="100" Margin="10,250,0,0" VerticalAlignment="Top" Width="130"/>
+                <Button x:Name="button_addToStatesAlphabet" Content="Add" HorizontalAlignment="Left" Margin="154,222,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_addToStatesAlphabet_Click"/>
+                <Button x:Name="button_clearStatesAlphabet" Content="Clear" HorizontalAlignment="Left" Margin="154,327,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_clearStatesAlphabet_Click"/>
+                <Button x:Name="button_removeFromStatesAlphabet" Content="Remove" HorizontalAlignment="Left" Margin="154,299,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_removeFromStatesAlphabet_Click"/>
+                <Label x:Name="label_outputAlphabet" Content="Y - Output Alphabet" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Width="130"/>
+                <TextBox x:Name="textBox_OutputAlphabet" HorizontalAlignment="Left" Height="23" Margin="10,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="130" TextChanged="textBox_OutputAlphabet_TextChanged"  PreviewTextInput="NumberValidationTextBox"/>
+                <ListBox x:Name="listBox_OutputAlphabet" HorizontalAlignment="Left" Height="100" Margin="10,425,0,0" VerticalAlignment="Top" Width="130"/>
+                <Button x:Name="button_clearOutputAlphabet" Content="Clear" HorizontalAlignment="Left" Margin="154,502,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_clearOutputAlphabet_Click"/>
+                <Button x:Name="button_removeFromOutputAlphabet" Content="Remove" HorizontalAlignment="Left" Margin="154,474,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_removeFromOutputAlphabet_Click"/>
+                <Button x:Name="button_addToOutputAlphabet" Content="Add" HorizontalAlignment="Left" Margin="154,397,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_addToOutputAlphabet_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox_functionProtocol" Header="Protocol's function" HorizontalAlignment="Left" Margin="259,10,0,0" VerticalAlignment="Top" Height="549" Width="355" BorderBrush="#FF0E4464">
+            <Grid HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="345" Margin="0,0,-2,-1">
+                <Label x:Name="label_InputFunction" Content="Input Function (X -> Q):" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="135"/>
+                <ComboBox x:Name="comboBox_FirstElemOfInputFunc" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="100"/>
+                <ComboBox x:Name="comboBox1_SecondElemOfInputFunc" HorizontalAlignment="Left" Margin="140,48,0,0" VerticalAlignment="Top" Width="100"/>
+                <Label x:Name="label1" Content="->" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="110,45,145,0" VerticalAlignment="Top" Width="30" Height="22"/>
+                <Button x:Name="button_addInputFunction" Content="Add" HorizontalAlignment="Left" Margin="254,47,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_addInputFunction_Click"/>
+                <ListBox x:Name="listBox_inputFunction" HorizontalAlignment="Left" Height="100" Margin="10,76,0,0" VerticalAlignment="Top" Width="230"/>
+                <Button x:Name="button_clearInpufFunction" Content="Clear" HorizontalAlignment="Left" Margin="254,153,0,0" VerticalAlignment="Top" Width="70" Height="23"/>
+                <Button x:Name="button_removeFromInputFunction" Content="Remove" HorizontalAlignment="Left" Margin="254,125,0,0" VerticalAlignment="Top" Width="70" Height="23"/>
+                <Label x:Name="label_Copy" Content="Transition Function ((Q , Q) -&gt; (Q , Q)):" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" Width="222"/>
+                <ComboBox x:Name="comboBox_FirstElemOfStatesFunc1" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Width="41"/>
+                <ComboBox x:Name="comboBox_SecondElemOfStatesFunc1" HorizontalAlignment="Left" Margin="140,222,0,0" VerticalAlignment="Top" Width="41"/>
+                <Label x:Name="label2" Content="-&gt;" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="110,219,0,0" VerticalAlignment="Top" Width="30" Height="22"/>
+                <Button x:Name="button_addToStatesFunction" Content="Add" HorizontalAlignment="Left" Margin="254,221,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_addToStatesFunction_Click"/>
+                <ListBox x:Name="listBox_StatesFunction" HorizontalAlignment="Left" Height="100" Margin="10,250,0,0" VerticalAlignment="Top" Width="230"/>
+                <Button x:Name="button_clearStatesFunction" Content="Clear" HorizontalAlignment="Left" Margin="254,327,0,0" VerticalAlignment="Top" Width="70" Height="23"/>
+                <Button x:Name="button_removeOfStatesFunction" Content="Remove" HorizontalAlignment="Left" Margin="254,299,0,0" VerticalAlignment="Top" Width="70" Height="23"/>
+                <Label x:Name="label_Copy1" Content="Output Function ( Q -> Y ):" HorizontalAlignment="Left" Margin="10,366,0,0" VerticalAlignment="Top" Width="164"/>
+                <ComboBox x:Name="comboBox_FirstElemOfOutpuFunc" HorizontalAlignment="Left" Margin="10,397,0,0" VerticalAlignment="Top" Width="100"/>
+                <ComboBox x:Name="comboBox_SecondElemOfOutpuFunc" HorizontalAlignment="Left" Margin="140,397,0,0" VerticalAlignment="Top" Width="100"/>
+                <Label x:Name="label3" Content="-&gt;" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="110,394,0,0" VerticalAlignment="Top" Width="30" Height="22"/>
+                <Button x:Name="button_addToOutpuFunction" Content="Add" HorizontalAlignment="Left" Margin="254,396,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="button_addToOutpuFunction_Click"/>
+                <ListBox x:Name="listBox_OutputFunction" HorizontalAlignment="Left" Height="100" Margin="10,425,0,0" VerticalAlignment="Top" Width="230"/>
+                <Button x:Name="button_clearOutputFunction" Content="Clear" HorizontalAlignment="Left" Margin="254,502,0,0" VerticalAlignment="Top" Width="70" Height="23"/>
+                <Button x:Name="button_removeFromOutputFunction" Content="Remove" HorizontalAlignment="Left" Margin="254,474,0,0" VerticalAlignment="Top" Width="70" Height="23"/>
+                <ComboBox x:Name="comboBox_FirstElemOfStatesFunc2" HorizontalAlignment="Left" Margin="68,222,0,0" VerticalAlignment="Top" Width="41" RenderTransformOrigin="2.008,1.682"/>
+                <ComboBox x:Name="comboBox_SecondElemOfStatesFunc2" HorizontalAlignment="Left" Margin="199,223,0,0" VerticalAlignment="Top" Width="41"/>
+                <Label Content="," HorizontalAlignment="Left" Margin="53,222,0,0" VerticalAlignment="Top"/>
+                <Label Content="," HorizontalAlignment="Left" Margin="184,222,0,0" VerticalAlignment="Top" RenderTransformOrigin="11.923,0.167"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="File settings" HorizontalAlignment="Left" Height="201" Margin="619,10,0,0" VerticalAlignment="Top" Width="256" BorderBrush="#FF0E4464">
+            <Grid HorizontalAlignment="Left" Height="179" Margin="0,0,-2,0" VerticalAlignment="Top" Width="246">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="17*"/>
+                    <ColumnDefinition Width="65*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Protocol's file name:" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="182"/>
+                <Label Content="Save protocol in:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                <Button x:Name="button_browse" Content="Browse" Grid.Column="1" HorizontalAlignment="Left" Margin="110,152,0,0" VerticalAlignment="Top" Width="75" Click="button_browse_Click"/>
+                <TextBox x:Name="textBox_protocolName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" TextChanged="textBox_protocolPath_TextChanged"/>
+                <TextBox x:Name="textBox_protocolDirectory" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="button_clearAll" Content="Clear all" HorizontalAlignment="Left" Margin="638,249,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="button_clearAll_Click"/>
+        <Button x:Name="button_save" Content="Save" HorizontalAlignment="Left" Margin="786,249,0,0" VerticalAlignment="Top" Width="89" FontWeight="Bold" Click="button_save_Click" Height="20"/>
+
+    </Grid>
+</Window>

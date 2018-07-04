@@ -1,0 +1,12 @@
+#graph
+10
+L
+F
+F
+F
+F
+F
+L
+F
+F
+F

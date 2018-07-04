@@ -1,0 +1,50 @@
+﻿<Window x:Class="PopulationProtocolApp.WindowGraph"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PopulationProtocolApp"
+        mc:Ignorable="d"
+        Title="WindowGraph" Height="360.16" Width="332.888" Closed="Window_Closed">
+    <Grid Background="#FFE5E5E6" HorizontalAlignment="Left" Width="323" Margin="0,0,0,1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="269" Margin="10,10,0,0" VerticalAlignment="Top" Width="298">
+            <Label x:Name="labNumberOfNodes" Content="Number of nodes: " HorizontalAlignment="Left" Margin="6,35,0,0" VerticalAlignment="Top" Width="107"/>
+            <TextBox x:Name="txtBxNumberOfNodes" HorizontalAlignment="Left" Height="23" Margin="122,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" TextChanged="txtBxNumberOfNodes_TextChanged" PreviewKeyDown="txtBxNumberOfNodes_PreviewKeyDown"/>
+            <GroupBox x:Name="groupBxDefineGraph" Header="Define graph" HorizontalAlignment="Left" Height="189" Margin="0,80,0,0" VerticalAlignment="Top" Width="298" IsEnabled="True" >
+                <Grid Height="169" Margin="0,0,-2,-2" VerticalAlignment="Top">
+                    <Label Content="symbol:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="69"/>
+                    <Label Content="number of symbol:" HorizontalAlignment="Left" Margin="88,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtBxNumberOfSymbol" HorizontalAlignment="Left" Height="23" Margin="93,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" PreviewKeyDown="txtBxNumberOfSymbol_PreviewKeyDown"/>
+                    <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="212,36,0,0" VerticalAlignment="Top" Width="60" Height="23" Click="btnAdd_Click"/>
+                    <ListView x:Name="listNode" HorizontalAlignment="Left" Height="88" Margin="10,72,0,0" VerticalAlignment="Top" Width="189">
+                        <ListView.View >
+                            <GridView>
+                                <GridViewColumn Header="Symbol" DisplayMemberBinding="{Binding Id}" Width="60"/>
+                                <GridViewColumn Header="Number of symbol" DisplayMemberBinding="{Binding Number}" Width="123"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="212,111,0,0" VerticalAlignment="Top" Width="60" Height="23" Click="btnRemove_Click"/>
+                    <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="212,82,0,0" VerticalAlignment="Top" Width="60" Height="23"/>
+                    <ComboBox x:Name="cmbBxInputAlphabet" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="73" BorderBrush="White">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                </Grid>
+            </GroupBox>
+            <CheckBox x:Name="checkBxIfRandom" Content="Random graph" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" IsChecked="True" Checked="checkBxIfRandom_Checked" Unchecked="checkBxIfRandom_Unchecked"/>
+        </Grid>
+        <Button x:Name="btnClear" Content="Clear" Margin="27,289,236,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="228,289,0,0" VerticalAlignment="Top" Width="60" FontWeight="Bold" Click="btnOk_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,101 @@
+# *****************************************************************************************************
+#                                          RESULT
+# *****************************************************************************************************
+# Path to protocol:C:\repozytoria\PopulationProtocolMgr\PopulationProtocolApp\majorityProtocolBase.txt
+# Path to graph:C:\repozytoria\PopulationProtocolMgr\PopulationProtocolApp\bin\Debug\graph_19node_2018-02-11--10-57-23.txt
+# *****************************************************************************************************
+# INFO ABOUT GRAPH:
+# number of nodes: 19
+# number of nodes with symbol 'L':10
+# number of nodes with symbol 'F':9
+# *****************************************************************************************************
+# INFO ABOUT PROTOCOL:
+
+# input alphabet: L; F; 
+# states: F; L; 0; 1; 
+# output alphabet: 0; 1; 
+
+# input function: 
+#   L -> L
+#   F -> F
+# states function: 
+#   L,F -> 0,0
+#   L,0 -> L,1
+#   F,1 -> F,0
+#   0,1 -> 0,0
+# output function: 
+#   L -> 1
+#   1 -> 1
+#   F -> 0
+#   0 -> 0
+# *****************************************************************************************************
+# RESULT SIMULATION:
+# -----------------------------------------------------------------------------------------------------
+# simulation 1/10
+output: 'Symulation doesn't converge'
+
+time: 1166138.6404 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 2/10
+output: 'Symulation doesn't converge'
+
+time: 1118808.9591 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 3/10
+output: 'Symulation doesn't converge'
+
+time: 1021383.9951 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 4/10
+output: 'Symulation doesn't converge'
+
+time: 1014331.2011 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 5/10
+output: 'Symulation doesn't converge'
+
+time: 1144438.675 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 6/10
+output: 'Symulation doesn't converge'
+
+time: 1072039.061 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 7/10
+output: 'Symulation doesn't converge'
+
+time: 1123218.2713 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 8/10
+output: 'Symulation doesn't converge'
+
+time: 983340.9752 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 9/10
+output: 'Symulation doesn't converge'
+
+time: 1134237.9986 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# simulation 10/10
+output: 'Symulation doesn't converge'
+
+time: 1130863.6607 ms
+number of interaction: 1000000001
+# -----------------------------------------------------------------------------------------------------
+# *****************************************************************************************************
+# STATISTIC OF ALL SIMULATIONS:
+# -----------------------------------------------------------------------------------------------------
+number of simulation: 10
+output: 'Symulation doesn't converge': 10/10 => 100 %
+average time od one simulation: 1090880.14375 ms
+number of interaction: 141006541
+# -----------------------------------------------------------------------------------------------------
